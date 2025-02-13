@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre el mejor lugar para disfrutar de tus platillos favoritos. Menú variado y opciones deliciosas.">
+    <title>El mejor lugar para comer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark se-gris">
+        <div class="container">
+            <a class="navbar-brand pacifico-grande white" href="index.html">Food Facilito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link lato white" href="pedidos.html">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link pacifico-grande white" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link white" href="acerca_de.html">Acerca de</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="container my-5">
+        <div class="text-center">
+            <h1 class="pacifico-grande azul">Menú</h1>
+            <p class="white pacifico-grande">Todos los productos preparados con calidad</p>
+    
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="menu-item text-center pacifico-grande">
+                        <h3 class="white">Ice Cream</h3>
+                        <img src="img/icecream.png" class="img-fluid food-image" alt="ice cream" loading="lazy">
+                        <p><strong>11.000</strong></p>
+                        <button class="btn btn-primary add-to-cart" aria-label="Añadir Ice Cream al carrito pacifico-grande" data-name="Ice Cream" data-price="11000">🛒 Añadir</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="menu-item text-center pacifico-grande">
+                        <h3 class="pacifico-grande">Hamburguesa</h3>
+                        <img src="img/hamburguesa.png" class="img-fluid food-image" alt="hamburguesa" loading="lazy">
+                        <p><strong>15.000</strong></p>
+                        <button class="btn btn-primary add-to-cart" aria-label="Añadir Hamburguesa al carrito" data-name="Hamburguesa" data-price="15000">🛒 Añadir</button>
+
+                    </div>
+                </div>
+    
+                <!-- Producto 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="menu-item text-center pacifico-grande">
+                        <h3 class="pacifico-grande white">Sandwich</h3>
+                        <img src="img/sandwich.png" class="img-fluid food-image" alt="sandwich" loading="lazy">
+                        <p><strong>17.000</strong></p>
+                        <button class="btn btn-primary add-to-cart" aria-label="Añadir Sandwich al carrito" data-name="Sandwich" data-price="17000">🛒 Añadir</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="menu-item text-center pacifico-grande">
+                        <h3 class="white">Hot Dog</h3>
+                        <img src="img/hotdog.png" class="img-fluid food-image" alt="hotdog" loading="lazy">
+                        <p><strong>15.000</strong></p>
+                        <button class="btn btn-primary add-to-cart" aria-label="Añadir hotdog al carrito" data-name="hotdog" data-price="15000">🛒 Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN CARRITO -->
+    <div class="container my-5">
+        <h2 class="text-center pacifico-grande white">🛒 Carrito de Compras</h2>
+        <ul id="cart-items" class="list-group"></ul>
+        <p class="text-center pacifico-grande white"><strong>Total: $<span id="cart-total">.000</span> COP</strong></p>
+        <div class="text-center">
+            <button class="btn btn-success" id="checkout">Finalizar Compra</button>
+            <button class="btn btn-danger" id="clear-cart">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para animaciones en imágenes -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let images = document.querySelectorAll(".food-image");
+            images.forEach(img => {
+                img.onload = () => img.classList.add("loaded");
+            });
+        });
+    </script>
+
+   
+
+
+<script src="js/carrito.js"></script>
+
+</body>
+</html>
